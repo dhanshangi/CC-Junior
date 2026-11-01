@@ -1,0 +1,777 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  /** Font Size **/
+  --fontSize1: calc(2rem - 0.5rem);
+  --fontSize2: calc(2.5rem - 0.5rem);
+
+  /* Color */
+  --color1: #151515;
+  --color2: #ffffff;
+  --color3: #10105a;
+
+  --xs: 1%;
+  --sm: 2.5%;
+  --md: 5%;
+  --lg: 7.5%;
+  --xl: 10%;
+
+  --px-xs: 1%;
+  --px-sm: 2.5%;
+  --px-md: 5%;
+  --px-lg: 7.5%;
+  --px-xl: 10%;
+}
+
+/* --------------------------------------  Common style start -------------------------------------- */
+
+/* Background img for entire home */
+
+body {
+  background: url(../img/bg_img.png) no-repeat center/cover fixed;
+  font-family: "Tilt Warp", serif;
+  letter-spacing: 1px;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  user-select: none;
+}
+
+img {
+  width: 100%;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0 !important;
+  font-weight: lighter;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+}
+
+.nav-icons .n1-i2 a:hover,
+ .nav-icons .n1-i3 a:hover{ 
+    /* cursor: url('/img/cursor.png'), auto; */
+    cursor: no-drop;
+  }
+  
+.pageGrid {
+  height: 100%;
+  padding: 1.5% 5%;
+}
+
+.pageGrid.lesson {
+  padding: 1.5% 0;
+}
+
+.lesson .navbar {
+  padding: 0 5%;
+}
+
+.borderbox li {
+  font-size: 2rem;
+  color: #000;
+  padding: 10px;
+  font-family: "Poppins", sans-serif;
+}
+
+.borderbox {
+  width: 50%;
+  height: 50vh;
+  border: 4px solid #f4f0f0;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.project{
+  --xl:15%;
+}
+
+.img-size{
+  width: 100px;
+}
+
+/* ------------------------------------------ Navbar styles  ------------------------------------------*/
+.navbar h1 {
+  font-size: 2.4rem;
+  color: var(--color2);
+  padding-left: 5px;
+}
+
+.nav-profile img {
+  width: 70px;
+  height: 70px;
+}
+
+.nav-title img {
+  width: 100%;
+}
+
+.nav-icons img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.nav-icons h2 {
+  font-size: 1.8rem;
+  color: var(--color2);
+  font-weight: lighter;
+  padding-top: 3px;
+}
+
+/* practice popup start */
+
+.practice-popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  position: relative;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 70%;
+}
+
+.popup-img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  cursor: zoom-in;
+}
+
+.practice-close {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.practice-close:before {
+  content: "\f00d";
+  font-family: "Font Awesome 6 Free";
+  font-weight: bold;
+}
+
+/* Practice popup End */
+
+/* --------------------------------------  Common style end -------------------------------------- */
+
+/* Hero page style */
+
+.completed {
+  background-image: url('../img/Completed_bg.png');
+}
+
+.processing {
+  background-image: url('../img/Processing_bg.png');
+}
+
+.locked {
+  background-image: url('../img/Lock_bg.png');
+}
+
+.lesson .completed,
+.lesson .processing,
+.lesson .locked {
+  width: 60%;
+  height: 50px;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+  place-items: center;
+  padding: 10px;
+  position: relative;
+  top: 20px;
+}
+
+.lesson .level-icon img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.lesson .level h3 {
+  font-size: 2.2rem;
+  color: var(--color2);
+}
+
+.scroll-cards {
+  overflow: hidden;
+  overflow-x: scroll;
+  padding-left: 5%;
+  padding-bottom: 3%;
+  padding-right: 5%;
+  max-width: 100%;
+}
+
+.scroll-cards img {
+  width: auto;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  scroll-behavior: smooth;
+  height: 15px;
+}
+
+::-webkit-scrollbar-track {
+  padding: 2px;
+  background-color: #d4aae7;
+  border-radius: 20px;
+  cursor: pointer;
+  margin: 0 70px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(200, 134, 231);
+  border-radius: 20px;
+  border: 4px solid #d4aae7;
+  cursor: pointer;
+}
+
+
+/* --------------------------------------  Lesson style -> levels (level 1 to level 10) -------------------------------------- */
+/* Navigation Row */
+.level .prev-arrow,
+.Prac_level .prev-arrow {
+  width: 42px;
+}
+
+.level-indicator {
+  width: 110px;
+  background-color: var(--color2);
+  border-radius: 50px;
+  padding: 7px;
+}
+
+.level-indicator h3 {
+  font-size: 2.2rem;
+  color: var(--color3);
+}
+
+.boxsize {
+  width: 150px !important;
+}
+
+.less_level-cards {
+  height: 70vh;
+  align-content: center;
+}
+
+/* Cards  styles*/
+.lesson_level {
+  cursor: pointer;
+}
+
+.lesson-btn h3 {
+  font-size: 1.9rem;
+  color: var(--color2);
+}
+
+.lesson_level .completed,
+.lesson_level .processing,
+.lesson_level .locked {
+  width: 80%;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+  place-items: center;
+  padding: 7px;
+  position: relative;
+  top: 20px;
+}
+
+.lesson-btn img {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+
+/* --------------------------------------  Lesson style end -------------------------------------- */
+
+/* --------------------------------------  Practice style start -------------------------------------- */
+
+.practice_level {
+  width: auto;
+}
+
+.practice_level .n2-i1 {
+  width: 100%;
+}
+
+.practice_level,
+.Prac_level #m1 .n0-i2 .n2-i1 img {
+  cursor: pointer;
+}
+
+.Prac_level-cards {
+  height: 70vh;
+  align-content: center;
+}
+
+.level-btn-inner {
+  width: 70%;
+  background-color: var(--color2);
+  border-radius: 20px;
+  position: relative;
+  top: 15px;
+}
+
+.level-btn-inner h3 {
+  font-size: 1.9rem;
+  color: var(--color3);
+}
+
+/* --------------------------------------Practice level page 1 to 10 ------------------------------------------- */
+/* Practice_level style */
+.practice-cards .n0-i2 {
+  --sm: 3%;
+}
+
+.practice-btn {
+  width: 65%;
+  background-color: var(--color2);
+  border-radius: 30px;
+  position: relative;
+  top: 5%;
+}
+
+.practice-btn h3 {
+  font-size: 1.9rem;
+  color: var(--color3);
+}
+
+.Prac_level-card {
+  width: auto;
+}
+
+/* --------------------------------------  Practice style end -------------------------------------- */
+
+/* --------------------------------------  Skills style start -------------------------------------- */
+
+.barchart-container {
+  grid-template-columns: 75px 1fr;
+  width: 100%;
+  /* height: 100%; */
+  background-image: url('../img/barchart-bg-img.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 30px;
+  margin-top: 2.5%;
+}
+
+.skill-levels {
+  grid-template-rows: repeat(3, 1fr);
+  width: 100%;
+  background: rgba(236, 216, 253, 0.4);
+  border-radius: 30px 0 0 30px;
+}
+
+.skill-levels .skill-level {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  height: 25%;
+}
+
+.skill-levels h3 {
+  font-size: 2rem;
+  color: #fafafa;
+}
+
+/* Bars */
+.bars {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  justify-content: space-around;
+  align-items: flex-end;
+  border-radius: 0 30px 30px 0;
+  border-left: 4px dashed rgb(255, 255, 255, 0.2);
+  border-bottom: 4px dashed rgb(255, 255, 255, 0.2);
+}
+
+.bar {
+  width: 160px;
+  height: 100%;
+  position: relative;
+  /* background: linear-gradient(to top,
+      #FC8342 0%,
+      #FC8342 30%,
+      #FCD25A 30%,
+      #FCD25A 70%,
+      #A47CE8 70%,
+      #A47CE8 100%); */
+  background: #FC8342;
+  border-radius: 20px 20px 0 0;
+  box-shadow: inset 5px 0 0 0px rgba(0, 0, 0, 0.2);
+}
+
+.bar h3 {
+  font-size: 1.8rem;
+  color: #FAFAFA;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: 1%;
+  text-align: center;
+}
+
+.bar1 {
+  height: 30%;
+}
+
+.bar2 {
+  height: 50%;
+}
+
+.bar3 {
+  height: 66%;
+}
+
+.bar4 {
+  height: 80%;
+}
+
+.bar5 {
+  height: 100%;
+}
+
+/* Percentage of the bar */
+.bar-tooltip {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  border-radius: 8px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s;
+  z-index: 100;
+  min-width: 150px;
+  text-align: center;
+}
+
+.tooltip-skill {
+  font-size: 1.3rem;
+  color: #ffffff;
+}
+
+.tooltip-level {
+  font-size: 1.3rem;
+  color: #FCD25A;
+}
+
+.tooltip-percentage {
+  font-size: 1.3rem;
+  color: #A47CE8;
+}
+
+
+
+/* --------------------------------------  Skills style end -------------------------------------- */
+
+/* --------------------------------------  Portrait screen style start -------------------------------------- */
+
+.mobile p,
+.mobile img {
+  display: none;
+}
+
+/* --------------------------------------  Portrait screen style end -------------------------------------- */
+
+/* ----------------------------------------- Resposive code ---------------------------------------- */
+
+/* large laptop screen*/
+@media (min-width: 1440px) {
+  .less_card-container2 {
+    margin-top: 3.5%;
+  }
+
+  .practice-cards .n0-i2 {
+    margin-top: 3.5%;
+  }
+
+  .Prac_level-cards {
+    margin: 0;
+  }
+
+  .Prac_level-card {
+    margin-top: -10%;
+  }
+
+  .skill-levels h3 {
+    font-size: 2.2rem;
+  }
+
+  .bar {
+    width: 200px;
+  }
+
+  .bar h3 {
+    font-size: 2rem;
+  }
+}
+
+/* small laptop screen*/
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+
+  /* Header */
+  .navbar h1 {
+    font-size: 1.8rem;
+  }
+
+  .nav-profile img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+
+  .nav-icons img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .nav-icons h2 {
+    font-size: 1.5rem;
+  }
+
+  /* Lessons Page */
+  .scroll-cards img {
+    width: 200px;
+  }
+
+  ::-webkit-scrollbar-track {
+    margin: 0 50px;
+  }
+
+  .level .prev-arrow,
+  .Prac_level .prev-arrow {
+    width: 35px;
+  }
+
+  .lesson .completed,
+  .lesson .processing,
+  .lesson .locked {
+    height: 35px;
+    padding: 8px;
+    top: 15px;
+  }
+
+  .lesson .level-icon img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .lesson .level h3 {
+    font-size: 2rem;
+  }
+
+  /* Lesson-Level Page */
+  .level-indicator {
+    width: 90px;
+  }
+
+  .level-indicator h3 {
+    font-size: 1.8rem;
+  }
+
+  .lesson-btn h3 {
+    font-size: 1.2rem;
+  }
+
+  .lesson_level .completed,
+  .lesson_level .processing,
+  .lesson_level .locked {
+    padding: 5px;
+    top: 15px;
+  }
+
+  .lesson-btn img {
+    width: 18px;
+    height: 18px;
+  }
+
+  .less_card-container2 {
+    margin-top: 4%;
+  }
+
+  .level-btn-inner h3 {
+    font-size: 1.3rem;
+  }
+
+  .practice-cards .n0-i2 {
+    margin-top: 4%;
+  }
+
+  .practice-btn h3 {
+    font-size: 1.2rem;
+  }
+
+  .bar {
+    width: 120px;
+  }
+
+  .bar h3 {
+    font-size: 1.2rem;
+  }
+
+  .img-size{
+    width: 80px;
+  }
+}
+
+@media (max-width: 950px) and (orientation: landscape) {
+
+  body {
+    overflow: unset;
+  }
+
+  .navbar h1 {
+    font-size: 1.5rem;
+  }
+
+  .nav-profile img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .nav-title img {
+    width: 75%;
+  }
+
+  .nav-icons img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .nav-icons h2 {
+    font-size: 1.2rem;
+  }
+
+  .scroll-cards {
+    zoom: 0.5;
+  }
+
+  .level-navigation {
+    margin-top: 1%;
+  }
+
+  .level .prev-arrow,
+  .Prac_level .prev-arrow {
+    width: 20px;
+  }
+
+  .level-indicator {
+    width: 70px;
+    padding: 4px;
+  }
+
+  .level-indicator h3 {
+    font-size: 1.2rem;
+  }
+
+  .practice-cards .practice_level {
+    zoom: 0.45;
+  }
+
+  .less_level-cards .lesson_level {
+    zoom: 0.45;
+  }
+
+  .less_card-container2 {
+    margin-top: 2%;
+  }
+
+  .lesson_level .completed,
+  .lesson_level .processing,
+  .lesson_level .locked {
+    width: 100%;
+    height: 40px;
+    place-content: center;
+  }
+
+  .lesson-btn h3 {
+    font-size: 1.8rem;
+  }
+
+  .level-btn-inner h3 {
+    font-size: 2rem;
+  }
+
+  .Prac_level-card {
+    zoom: 0.37;
+    margin-top: -15%;
+  }
+
+  .practice-btn h3 {
+    font-size: 2.2rem;
+  }
+
+  .skill-levels .skill-level {
+    height: 30%;
+  }
+
+  .barchart-container {
+    zoom: 0.6;
+  }
+
+}
+
+@media (max-width: 950px) and (orientation: portrait) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .pageGrid {
+    display: none;
+  }
+
+  .mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .mobile p {
+    display: flex;
+    font-size: 2rem;
+  }
+
+  .mobile img {
+    width: 10%;
+    display: flex;
+  }
+}
